@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Arnav Chavan's October 2026 California road trip planner."
+    />
+    <title>Arnav's California Loop · Oct 3–8, 2026</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="hero" id="top">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="#top">
+          <span class="brand-mark">CA</span>
+          <span>Arnav's roadbook</span>
+        </a>
+        <div class="nav-links">
+          <a href="#map">Map</a>
+          <a href="#route-launcher">Routes</a>
+          <a href="#itinerary">Itinerary</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">OCTOBER 3–8, 2026 · ONE VEGETARIAN · ONE OMNIVORE · MUSTANG</p>
+          <h1>The Sierra-to-sea California loop.</h1>
+          <p class="hero-summary">
+            Tahoe blue, Yosemite granite, giant sequoias and a Highway 1 finale—organized
+            into one practical roadbook for Arnav Chavan and his girlfriend.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#itinerary">View day-by-day plan</a>
+            <a
+              class="button secondary"
+              id="full-trip-google"
+              href="#route-launcher"
+            >
+              Open every route
+            </a>
+          </div>
+          <div class="route-line" aria-label="Trip destinations">
+            <span>Sunnyvale</span><i></i><span>Tahoe</span><i></i><span>Yosemite</span>
+            <i></i><span>Sequoia</span><i></i><span>Morro · Cambria</span><i></i
+            ><span>Big Sur</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-label">Trip pulse</div>
+          <div class="date-lockup">
+            <span class="date-big">03</span>
+            <span><strong>Saturday</strong><small>October 2026</small></span>
+            <span class="date-arrow">→</span>
+            <span class="date-big">08</span>
+            <span><strong>Thursday</strong><small>Home by evening</small></span>
+          </div>
+          <div class="quick-stats">
+            <div><strong>5</strong><span>nights</span></div>
+            <div><strong>3</strong><span>major parks</span></div>
+            <div><strong>6</strong><span>drive days</span></div>
+          </div>
+          <div class="status-row">
+            <span class="status-dot"></span>
+            <span>All lodging booked</span>
+          </div>
+          <div class="status-row dietary-status">
+            <span class="diet-dot">V</span>
+            <span>Vegetarian-first meal choices included</span>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section overview" aria-labelledby="overview-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">OVERVIEW</p>
+            <h2 id="overview-heading">Your stays, in order</h2>
+          </div>
+          <p>Five check-ins, no backtracking, one flexible coastal finish.</p>
+        </div>
+        <div class="stay-strip" id="stay-strip"></div>
+      </section>
+
+      <section class="section map-section" id="map" aria-labelledby="map-heading">
+        <div class="section-heading map-heading-row">
+          <div>
+            <p class="eyebrow">ROUTE OVERVIEW</p>
+            <h2 id="map-heading">Explore the loop one day at a time</h2>
+          </div>
+          <div class="route-toggle" role="group" aria-label="Highway 1 route status">
+            <button class="toggle-button active" data-route-mode="open">
+              Highway 1 plan
+            </button>
+            <button class="toggle-button" data-route-mode="closed">
+              Backup detour
+            </button>
+          </div>
+        </div>
+        <div class="map-shell">
+          <div
+            id="trip-map"
+            aria-label="Schematic map of the complete California road trip"
+          ></div>
+          <aside class="map-panel">
+            <p class="panel-kicker" id="map-focus-kicker">Map focus</p>
+            <h3 id="map-focus-title">Full California loop</h3>
+            <p id="map-focus-copy">
+              Select a day to isolate its route, inspect every stop and launch the
+              correctly segmented directions.
+            </p>
+            <div class="map-day-controls" id="map-day-controls"></div>
+            <div class="map-focus-stops" id="map-focus-stops"></div>
+            <div class="map-panel-actions" id="map-panel-actions"></div>
+          </aside>
+        </div>
+        <div class="route-launcher-heading" id="route-launcher">
+          <div>
+            <p class="eyebrow">GOOGLE MAPS ROUTE PACK</p>
+            <h3>Six complete routes, split to preserve every stop</h3>
+          </div>
+          <p>
+            Every button contains at most three waypoints, preventing Google Maps
+            from dropping stops on mobile. Open each numbered part in order.
+          </p>
+        </div>
+        <div class="route-launcher" id="route-launcher-list"></div>
+      </section>
+
+      <section class="section" id="itinerary" aria-labelledby="itinerary-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DAY-BY-DAY</p>
+            <h2 id="itinerary-heading">The operational itinerary</h2>
+          </div>
+          <p>Times are targets. Road and weather checks always win.</p>
+        </div>
+        <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Trip days"></div>
+        <div id="day-detail"></div>
+      </section>
+
+      <section class="section live-checks" aria-labelledby="checks-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LIVE CHECKS</p>
+            <h2 id="checks-heading">Open these before each mountain leg</h2>
+          </div>
+        </div>
+        <div class="check-grid">
+          <a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noreferrer">
+            <span>Roads</span><strong>Caltrans QuickMap</strong><small>Chains, closures, incidents</small>
+          </a>
+          <a
+            href="https://www.nps.gov/yose/planyourvisit/conditions.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Yosemite</span><strong>Current conditions</strong><small>Trails and road access</small>
+          </a>
+          <a
+            href="https://www.nps.gov/seki/planyourvisit/road-conditions.htm"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Sequoia</span><strong>Road conditions</strong><small>Generals Highway and Moro Rock</small>
+          </a>
+          <a
+            href="https://roads.dot.ca.gov/?roadnumber=1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Coast</span><strong>Highway 1 status</strong><small>Big Sur through access</small>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>Arnav's California Loop</strong>
+        <span>Built for October 3–8, 2026</span>
+      </div>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
