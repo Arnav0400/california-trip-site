@@ -4,6 +4,134 @@ const locations = {
     query: "Sunnyvale, CA",
     coords: [37.3688, -122.0363],
   },
+  sfo: {
+    name: "SFO",
+    query: "San Francisco International Airport, CA",
+  },
+  ferryBuilding: {
+    name: "Ferry Building",
+    query: "Ferry Building, San Francisco, CA",
+  },
+  chinatown: {
+    name: "Chinatown",
+    query: "Dragon Gate, Chinatown, San Francisco, CA",
+  },
+  northBeach: {
+    name: "North Beach",
+    query: "Washington Square, San Francisco, CA",
+  },
+  palaceFineArts: {
+    name: "Palace of Fine Arts",
+    query: "Palace of Fine Arts, San Francisco, CA",
+  },
+  crissyField: {
+    name: "Crissy Field",
+    query: "Crissy Field East Beach, San Francisco, CA",
+  },
+  muirWoods: {
+    name: "Muir Woods",
+    query: "Muir Woods National Monument, Mill Valley, CA",
+  },
+  sausalito: {
+    name: "Sausalito waterfront",
+    query: "Sausalito Ferry Terminal, Sausalito, CA",
+  },
+  batterySpencer: {
+    name: "Battery Spencer",
+    query: "Battery Spencer, Sausalito, CA",
+  },
+  alices: {
+    name: "Alice's Restaurant",
+    query: "Alice's Restaurant, 17288 Skyline Blvd, Woodside, CA",
+  },
+  windyHill: {
+    name: "Windy Hill",
+    query: "Windy Hill Open Space Preserve, Portola Valley, CA",
+  },
+  filoli: {
+    name: "Filoli",
+    query: "Filoli Historic House & Garden, Woodside, CA",
+  },
+  halfMoonBay: {
+    name: "Half Moon Bay",
+    query: "Main Street, Half Moon Bay, CA",
+  },
+  henryCowell: {
+    name: "Henry Cowell Redwoods",
+    query: "Henry Cowell Redwoods State Park, Felton, CA",
+  },
+  westCliff: {
+    name: "West Cliff Drive",
+    query: "Lighthouse Field State Beach, Santa Cruz, CA",
+  },
+  capitola: {
+    name: "Capitola Village",
+    query: "Capitola Village, Capitola, CA",
+  },
+  sierraVista: {
+    name: "Sierra Vista sunset",
+    query: "Sierra Vista Open Space Preserve, San Jose, CA",
+  },
+  alviso: {
+    name: "Alviso Marina",
+    query: "Alviso Marina County Park, San Jose, CA",
+  },
+  shorelineLake: {
+    name: "Shoreline Lake",
+    query: "Shoreline Lake Boathouse, Mountain View, CA",
+  },
+  castroStreet: {
+    name: "Castro Street",
+    query: "Castro Street, Mountain View, CA",
+  },
+  stanford: {
+    name: "Stanford campus",
+    query: "Stanford Memorial Church, Stanford, CA",
+  },
+  paloAlto: {
+    name: "Downtown Palo Alto",
+    query: "University Avenue, Palo Alto, CA",
+  },
+  ranchoSanAntonio: {
+    name: "Rancho San Antonio",
+    query: "Rancho San Antonio County Park, Cupertino, CA",
+  },
+  santanaRow: {
+    name: "Santana Row",
+    query: "Santana Row, San Jose, CA",
+  },
+  communicationHill: {
+    name: "Communication Hill",
+    query: "Grand Staircase, Communication Hill, San Jose, CA",
+  },
+  sanPedro: {
+    name: "San Pedro Square",
+    query: "San Pedro Square Market, San Jose, CA",
+  },
+  lexington: {
+    name: "Lexington Reservoir",
+    query: "Lexington Reservoir County Park, Los Gatos, CA",
+  },
+  losGatos: {
+    name: "Downtown Los Gatos",
+    query: "North Santa Cruz Avenue, Los Gatos, CA",
+  },
+  woodside: {
+    name: "Woodside",
+    query: "Woodside, CA",
+  },
+  portolaValley: {
+    name: "Portola Valley",
+    query: "Portola Valley Town Center, Portola Valley, CA",
+  },
+  pacifica: {
+    name: "Pacifica",
+    query: "Pacifica State Beach, Pacifica, CA",
+  },
+  devilsSlide: {
+    name: "Devil's Slide",
+    query: "Devil's Slide Trail, Pacifica, CA",
+  },
   placerville: {
     name: "Placerville Main Street",
     query: "Main Street, Placerville, CA",
@@ -155,6 +283,243 @@ const locations = {
     coords: [36.5552, -121.9233],
   },
 };
+
+const visitBookends = [
+  {
+    date: "Fri · Sep 18",
+    label: "Arrival afternoon",
+    title: "SFO → settle in → easy neighborhood dinner",
+    copy: "Do not schedule a major attraction. If energy remains, use Baylands or Castro Street for a short sunset walk.",
+    route: ["sfo", "sunnyvale"],
+    color: "#3f80a5",
+  },
+  {
+    date: "Fri · Oct 9",
+    label: "Final date night",
+    title: "Choose Palo Alto or the SF waterfront",
+    copy: "After the road trip, keep this flexible: a relaxed local dinner wins unless both of you still want one final city night.",
+    route: ["sunnyvale", "paloAlto", "sunnyvale"],
+    color: "#9d6a45",
+  },
+  {
+    date: "Sat · Oct 10",
+    label: "Departure afternoon",
+    title: "Breakfast → SFO with a generous buffer",
+    copy: "Use Palo Alto or Burlingame for breakfast, then target SFO two hours before a domestic flight or three before an international flight.",
+    route: ["sunnyvale", "sfo"],
+    color: "#194f3d",
+  },
+];
+
+const weekendPlans = [
+  {
+    date: "Sat · Sep 19",
+    theme: "Big-city immersion",
+    title: "San Francisco without parking stress",
+    duration: "Full day · Caltrain first",
+    color: "#3f80a5",
+    stops: ["ferryBuilding", "chinatown", "northBeach", "palaceFineArts", "crissyField"],
+    schedule: [
+      ["08:00", "Caltrain from Sunnyvale; check the weekend timetable the night before."],
+      ["09:30", "Ferry Building breakfast and Embarcadero walk."],
+      ["10:45", "Chinatown alleys, shops and tea."],
+      ["12:30", "North Beach lunch with vegetarian options."],
+      ["14:00", "Cable car or Lombard Street, depending on queues."],
+      ["16:00", "Palace of Fine Arts, Crissy Field and Golden Gate views."],
+      ["19:00", "Dinner at Wildseed, Shizen or Greens; return by Caltrain."],
+    ],
+    food: "Vegetarian-first: Wildseed or Shizen · omnivore-friendly fallback: North Beach Italian.",
+    actions: [
+      ["Caltrain schedule", "https://www.caltrain.com/status"],
+      ["SF day map", "https://www.google.com/maps/search/?api=1&query=Ferry%20Building%20San%20Francisco"],
+    ],
+  },
+  {
+    date: "Sun · Sep 20",
+    theme: "Redwoods + Marin",
+    title: "Muir Woods → Sausalito → Golden Gate sunset",
+    duration: "≈ 135 road mi · full day",
+    color: "#194f3d",
+    route: ["sunnyvale", "muirWoods", "sausalito", "batterySpencer", "sunnyvale"],
+    stops: ["muirWoods", "sausalito", "batterySpencer"],
+    schedule: [
+      ["07:00", "Leave Sunnyvale with the Mustang empty and fueled."],
+      ["09:00", "Muir Woods main trail and optional Hillside Trail loop."],
+      ["12:00", "Sausalito waterfront lunch and relaxed walk."],
+      ["15:30", "Marin Headlands and Battery Spencer viewpoints."],
+      ["17:30", "Golden Gate light, then dinner before the drive south."],
+    ],
+    food: "Choose a Sausalito café with a vegetarian sandwich, grain bowl or pizza.",
+    actions: [
+      ["Reserve Muir Woods", "https://gomuirwoods.com/"],
+      ["Official conditions", "https://www.nps.gov/muwo/planyourvisit/conditions.htm"],
+    ],
+  },
+  {
+    date: "Sat · Sep 26",
+    theme: "Mountain breakfast + coast",
+    title: "Alice's → Skyline → Filoli → Half Moon Bay",
+    duration: "≈ 105 road mi · full day",
+    color: "#ef9e54",
+    route: ["sunnyvale", "alices", "windyHill", "filoli", "halfMoonBay", "sunnyvale"],
+    stops: ["alices", "windyHill", "filoli", "halfMoonBay"],
+    schedule: [
+      ["07:15", "Climb to Skyline Boulevard before traffic builds."],
+      ["08:00", "Breakfast at Alice's Restaurant in the mountains."],
+      ["09:30", "Portola Valley/Windy Hill overlook or a short ridge walk."],
+      ["11:00", "Filoli house and gardens; prebook admission."],
+      ["14:30", "Half Moon Bay Main Street and coastal trail."],
+      ["18:00", "Beach sunset and an early dinner before Highway 92."],
+    ],
+    food: "Alice's has breakfast for both diets; Half Moon Bay offers pizza, pasta and seafood/vegetarian combinations.",
+    actions: [
+      ["Filoli tickets", "https://filoli.org/visit/"],
+      ["Windy Hill info", "https://www.openspace.org/preserves/windy-hill"],
+    ],
+  },
+  {
+    date: "Sun · Sep 27",
+    theme: "Redwoods + beach towns",
+    title: "Henry Cowell → Santa Cruz → Capitola",
+    duration: "≈ 95 road mi · full day",
+    color: "#5b769c",
+    route: ["sunnyvale", "henryCowell", "westCliff", "capitola", "sunnyvale"],
+    stops: ["henryCowell", "westCliff", "capitola"],
+    schedule: [
+      ["08:00", "Leave Sunnyvale before Highway 17 traffic grows."],
+      ["09:00", "Henry Cowell Redwood Grove Loop and optional river walk."],
+      ["12:00", "Lunch in Santa Cruz."],
+      ["13:30", "West Cliff Drive, lighthouse and Natural Bridges area."],
+      ["16:00", "Capitola Village, beach and colorful waterfront."],
+      ["18:30", "Dinner in Capitola, then return over Highway 17."],
+    ],
+    food: "Santa Cruz has strong vegetarian cafés; Capitola works well for pizza or Mexican food with separate veg and meat orders.",
+    actions: [
+      ["Henry Cowell info", "https://www.parks.ca.gov/?page_id=546"],
+      ["Santa Cruz conditions", "https://www.cityofsantacruz.com/government/city-departments/parks-recreation"],
+    ],
+  },
+];
+
+const localFilters = [
+  ["all", "All"],
+  ["sunset", "Sunsets"],
+  ["drive", "Scenic drives"],
+  ["date", "Date nights"],
+  ["easy", "Low energy"],
+  ["morning", "Mornings"],
+];
+
+const localIdeas = [
+  {
+    title: "Sierra Vista sunset",
+    category: ["sunset", "drive"],
+    time: "2½–3 hr",
+    best: "Leave Sunnyvale by 4:15–4:30",
+    copy: "Drive Sierra Road while it is still light, walk the overlook trails and leave before the preserve closes at sunset.",
+    route: ["sunnyvale", "sierraVista", "sunnyvale"],
+    color: "#ef9e54",
+  },
+  {
+    title: "Alviso wetlands + Indian dinner",
+    category: ["sunset", "easy"],
+    time: "2–2½ hr",
+    best: "Best low-effort sunset",
+    copy: "Walk the boardwalk and levee near Alviso Marina, then use North San Jose or Sunnyvale for vegetarian Indian food.",
+    route: ["sunnyvale", "alviso", "sunnyvale"],
+    color: "#3f80a5",
+  },
+  {
+    title: "Shoreline Lake + Castro Street",
+    category: ["sunset", "easy", "date"],
+    time: "2½–3 hr",
+    best: "Works after a normal workday",
+    copy: "A flat lake walk followed by dinner and dessert on Castro Street in Mountain View.",
+    route: ["sunnyvale", "shorelineLake", "castroStreet", "sunnyvale"],
+    color: "#3f80a5",
+  },
+  {
+    title: "Stanford + Downtown Palo Alto",
+    category: ["easy", "date"],
+    time: "2½–3 hr",
+    best: "Architecture + dinner",
+    copy: "Walk Main Quad, Memorial Church and the sculpture gardens, then continue to University Avenue.",
+    route: ["sunnyvale", "stanford", "paloAlto", "sunnyvale"],
+    color: "#9d6a45",
+  },
+  {
+    title: "Rancho San Antonio golden hour",
+    category: ["sunset", "easy"],
+    time: "2½ hr",
+    best: "Leave before commuter peak",
+    copy: "Use the flat lower trails or walk toward Deer Hollow Farm, then eat in Cupertino.",
+    route: ["sunnyvale", "ranchoSanAntonio", "sunnyvale"],
+    color: "#194f3d",
+  },
+  {
+    title: "Communication Hill + San Pedro",
+    category: ["sunset", "date"],
+    time: "3 hr",
+    best: "City lights without SF",
+    copy: "Climb the Grand Staircase for sunset, then choose the broad food selection at San Pedro Square.",
+    route: ["sunnyvale", "communicationHill", "sanPedro", "sunnyvale"],
+    color: "#716083",
+  },
+  {
+    title: "Santana Row night",
+    category: ["easy", "date"],
+    time: "2–3 hr",
+    best: "Rainy or tired evening",
+    copy: "Window-shopping, dinner and dessert in one walkable area; easy to shorten whenever needed.",
+    route: ["sunnyvale", "santanaRow", "sunnyvale"],
+    color: "#9d6a45",
+  },
+  {
+    title: "Portola Valley + Woodside loop",
+    category: ["drive", "sunset"],
+    time: "3–4 hr",
+    best: "Only with an early finish",
+    copy: "Use Woodside, Portola Road and Skyline Boulevard for a quiet forest-and-ridge drive. Avoid making the winding section an after-dark plan.",
+    route: ["sunnyvale", "woodside", "portolaValley", "alices", "sunnyvale"],
+    color: "#194f3d",
+  },
+  {
+    title: "Lexington Reservoir + Los Gatos",
+    category: ["sunset", "date"],
+    time: "3 hr",
+    best: "South Bay scenic evening",
+    copy: "Short reservoir viewpoint stop, then dinner and a walk along North Santa Cruz Avenue.",
+    route: ["sunnyvale", "lexington", "losGatos", "sunnyvale"],
+    color: "#5b769c",
+  },
+  {
+    title: "Half Moon Bay sunset run",
+    category: ["sunset", "drive", "date"],
+    time: "4–5 hr",
+    best: "Leave by 3:30–4:00",
+    copy: "Use only when work ends early: Main Street, coastal trail, sunset and dinner before returning on Highway 92.",
+    route: ["sunnyvale", "halfMoonBay", "sunnyvale"],
+    color: "#3f80a5",
+  },
+  {
+    title: "Pacifica + Devil's Slide",
+    category: ["drive", "sunset"],
+    time: "4½–5 hr",
+    best: "Friday or weekend backup",
+    copy: "A longer coastal alternative with cliffs, ocean air and a simple Pacifica dinner; skip if fog or traffic is heavy.",
+    route: ["sunnyvale", "devilsSlide", "pacifica", "sunnyvale"],
+    color: "#5b769c",
+  },
+  {
+    title: "Mountain breakfast reset",
+    category: ["morning", "drive"],
+    time: "3½–4 hr",
+    best: "Saturday or Sunday morning",
+    copy: "Alice's breakfast, a short Skyline overlook and home before lunch—use this if the full Filoli/coast day feels too ambitious.",
+    route: ["sunnyvale", "alices", "windyHill", "sunnyvale"],
+    color: "#ef9e54",
+  },
+];
 
 const stays = [
   {
@@ -833,6 +1198,7 @@ const routeColors = ["#3f80a5", "#ef9e54", "#194f3d", "#9d6a45", "#5b769c", "#71
 let currentDayIndex = 0;
 let routeMode = localStorage.getItem("arnav-route-mode-v2") || "open";
 let mapFocus = "all";
+let currentLocalFilter = "all";
 
 function googleRoute(routeKeys) {
   const route = routeKeys.map((key) => locations[key]);
@@ -890,6 +1256,138 @@ function googleSearch(query) {
 
 function appleSearch(place) {
   return `https://maps.apple.com/?q=${encodeURIComponent(place.query)}`;
+}
+
+function localStopLinks(keys) {
+  return keys
+    .map((key) => {
+      const place = locations[key];
+      return `
+        <a
+          class="local-stop-pill"
+          href="${googleSearch(place.query)}"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ${place.name} ↗
+        </a>
+      `;
+    })
+    .join("");
+}
+
+function localActionButtons(plan) {
+  const routeActions = plan.route ? routeButtons(plan.route, true) : "";
+  const extraActions = (plan.actions || [])
+    .map(
+      ([label, href]) => `
+        <a class="button secondary" href="${href}" target="_blank" rel="noreferrer">
+          ${label}
+        </a>
+      `,
+    )
+    .join("");
+  return `${routeActions}${extraActions}`;
+}
+
+function renderVisitBookends() {
+  document.getElementById("visit-bookends").innerHTML = visitBookends
+    .map(
+      (item) => `
+        <article class="bookend-card" style="--local-color:${item.color}">
+          <span class="bookend-date">${item.date}</span>
+          <span class="bookend-label">${item.label}</span>
+          <h3>${item.title}</h3>
+          <p>${item.copy}</p>
+          <div class="bookend-actions">${routeButtons(item.route, true)}</div>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderWeekendPlans() {
+  document.getElementById("weekend-plans").innerHTML = weekendPlans
+    .map(
+      (plan, index) => `
+        <article class="weekend-card" style="--local-color:${plan.color}">
+          <header class="weekend-card-header">
+            <div>
+              <span class="weekend-index">W${index + 1}</span>
+              <span class="weekend-date">${plan.date}</span>
+              <p>${plan.theme}</p>
+              <h3>${plan.title}</h3>
+            </div>
+            <span class="weekend-duration">${plan.duration}</span>
+          </header>
+          <div class="weekend-schedule">
+            ${plan.schedule
+              .map(
+                ([time, copy]) => `
+                  <div>
+                    <strong>${time}</strong>
+                    <span>${copy}</span>
+                  </div>
+                `,
+              )
+              .join("")}
+          </div>
+          <div class="local-stops">${localStopLinks(plan.stops)}</div>
+          <p class="weekend-food"><strong>Food:</strong> ${plan.food}</p>
+          <div class="local-actions">${localActionButtons(plan)}</div>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderLocalIdeas() {
+  const filters = document.getElementById("local-filters");
+  filters.innerHTML = localFilters
+    .map(
+      ([id, label]) => `
+        <button
+          class="local-filter ${currentLocalFilter === id ? "active" : ""}"
+          data-local-filter="${id}"
+        >
+          ${label}
+        </button>
+      `,
+    )
+    .join("");
+
+  const visibleIdeas =
+    currentLocalFilter === "all"
+      ? localIdeas
+      : localIdeas.filter((idea) => idea.category.includes(currentLocalFilter));
+
+  document.getElementById("local-ideas").innerHTML = visibleIdeas
+    .map(
+      (idea) => `
+        <article class="local-idea-card" style="--local-color:${idea.color}">
+          <div class="local-idea-topline">
+            <span>${idea.category.join(" · ")}</span>
+            <strong>${idea.time}</strong>
+          </div>
+          <h3>${idea.title}</h3>
+          <p>${idea.copy}</p>
+          <div class="local-best">
+            <span>Best timing</span>
+            <strong>${idea.best}</strong>
+          </div>
+          <div class="local-stops">${localStopLinks([...new Set(idea.route.slice(1, -1))])}</div>
+          <div class="local-actions">${routeButtons(idea.route, true)}</div>
+        </article>
+      `,
+    )
+    .join("");
+
+  filters.querySelectorAll("[data-local-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      currentLocalFilter = button.dataset.localFilter;
+      renderLocalIdeas();
+    });
+  });
 }
 
 function renderStays() {
@@ -1381,6 +1879,9 @@ function setRouteMode(mode) {
 }
 
 function initialize() {
+  renderVisitBookends();
+  renderWeekendPlans();
+  renderLocalIdeas();
   renderStays();
   renderDayTabs();
   renderDayDetail();
